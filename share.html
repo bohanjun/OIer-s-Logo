@@ -12,6 +12,7 @@
         <div style="height: 136px"></div>
         <h1 id="logo_title" style="text-align: center; font-size: 48px" class="center">Logo for OIers</h1>
         <p id="logo_slogan" style="text-align: center; font-size: 28px;" class="center">https://logo.oier.fun/</p>
+        <p id="logo_made_by" style="font-size: 16px; position: absolute; bottom: 0; width: 100%; text-align: center">Made By logo.oier.fun</p>
     </div>
 </body>
 <script src="https://static.piterator.com/node_modules/jquery/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -29,7 +30,7 @@
         val=getUrlParam("sg");
         if(reg.test(getUrlParam("sg"))) $('#logo_slogan').text("https://logo.oier.fun/");
         else $('#logo_slogan').text(getUrlParam("sg"));
-        if(getUrlParam("bf")=="true"){
+        if(getUrlParam("bf")!="false"){
             $('#logo_holder').css("background-color",getUrlParam("cr"));
             $('#logo_holder').css("color","#ffffff");
             $('#logo_holder').css("border","none");
@@ -40,8 +41,10 @@
         }
         $('#logo_title').css("font-weight",getUrlParam("ttb"));
         $('#logo_slogan').css("font-weight",getUrlParam("sgb"));
-        if(getUrlParam("br")=="true") $('#logo_holder').css("border-radius","24px");
+        if(getUrlParam("br")!="false") $('#logo_holder').css("border-radius","24px");
         else $('#logo_holder').css("border-radius","0px");
+        if(getUrlParam("mb")!="false") $('#logo_made_by').css("display","block");
+        else $('#logo_made_by').css("display","none");
     };
 </script>
 </html>
