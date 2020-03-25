@@ -76,6 +76,11 @@
                 <label><input type="radio" name="b_logo_bgfg" class="b_logo_bgfg" value="true" checked>黑底白字</label>
                 <label><input type="radio" name="b_logo_bgfg" class="b_logo_bgfg" value="false">白底黑字</label>
             </div>
+            <div>
+                Logo 边框样式
+                <label><input type="radio" name="b_logo_radius" class="b_logo_radius" value="true" checked>圆角矩形</label>
+                <label><input type="radio" name="b_logo_radius" class="b_logo_radius" value="false">普通矩形</label>
+            </div>
             <br />
             <div class="divider"></div>
             <br />
@@ -159,6 +164,11 @@
             $('#logo_holder').css("color",color);
             $('#logo_holder').css("border","4px solid "+color);
         }
+    });
+    $('.b_logo_radius').bind('input propertychange', function() {
+        bgfg=$('input:radio[name="b_logo_radius"]:checked').val();
+        if(bgfg=="true") $('#logo_holder').css("border-radius","24px");
+        else $('#logo_holder').css("border-radius","0px");
     });
 </script>
 </html>
