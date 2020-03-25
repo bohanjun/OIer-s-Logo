@@ -90,9 +90,9 @@
                 <span id="logo_slogan" class="center" style="font-size: 28px;">https://logo.oier.fun/</span>
             </div>
             <br />
-            <a id="share" class="button blue reversal" style="width: 640px; text-decoration: none" target="_blank" href="share?tt=Logo for OIers&sg=https://logo.oier.fun/&bf=true&cr=rgb(0, 181, 173)&ttb=400&sgb=400&br=true">分享</a>
+            <a id="share" class="button blue reversal" style="width: 640px; text-decoration: none" href="share?tt=Logo for OIers&sg=https://logo.oier.fun/&bf=true&cr=rgb(0, 181, 173)&ttb=400&sgb=400&br=true">分享</a>
         </div>
-        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     </div>
     <div class="footer floating center">
         <br />
@@ -116,6 +116,8 @@
         <br /><br />
         <a class="link grey" href="http://www.beian.miit.gov.cn/" target="_blank">沪ICP备19004827号-3</a>
         <br /><br />
+        <div title="TrustAsia 安全签章" id="myssl_seal" onclick="window.open('https://seal.trustasia.com/seal/detail?domain=oier.fun','TrustAsia 安全签章','height=800,width=470,top=0,right=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no')" style="text-align: center"><img src="https://sealres.trustasia.com/seal/img/1x/seal.svg?domain=oier.fun" alt="TrustAsia 安全签章" style="width: 130px; height: auto; cursor: pointer"></div>
+        <br />
     </div>
 </body>
 <script src="https://static.piterator.com/node_modules/jquery/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -125,27 +127,27 @@
         var reg = /^\s*$/;tt=$(this).val();
         if(reg.test($(this).val())) $('#logo_title').text("Logo for OIers");
         else $('#logo_title').text($(this).val());
-        $("#share").attr("href","share?tt="+tt+"&sg="+sg+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
+        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
     });
     $('#s_logo_slogan').bind('input propertychange', function() {
         var reg = /^\s*$/;sg=$(this).val();
         if(reg.test($(this).val())) $('#logo_slogan').text("https://logo.oier.fun/");
         else $('#logo_slogan').text($(this).val());
-        $("#share").attr("href","share?tt="+tt+"&sg="+sg+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
+        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
     });
     $('.b_logo_title').bind('input propertychange', function() {
         var val=$('input:radio[name="b_logo_title"]:checked').val();
         ttb=val;
         $('#logo_title').css("font-weight",val);
         $('#s_logo_title').css("font-weight",val);
-        $("#share").attr("href","share?tt="+tt+"&sg="+sg+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
+        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
     });
     $('.b_logo_slogan').bind('input propertychange', function() {
         var val=$('input:radio[name="b_logo_slogan"]:checked').val();
         sgb=val;
         $('#logo_slogan').css("font-weight",val);
         $('#s_logo_slogan').css("font-weight",val);
-        $("#share").attr("href","share?tt="+tt+"&sg="+sg+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
+        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
     });
     $('.b_logo_bg').bind('input propertychange', function() {
         color=$('input:radio[name="b_logo_bg"]:checked').val();
@@ -158,7 +160,7 @@
             $('#logo_holder').css("color",color);
             $('#logo_holder').css("border","4px solid "+color);
         }
-        $("#share").attr("href","share?tt="+tt+"&sg="+sg+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
+        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
     });
     $('.b_logo_bgfg').bind('input propertychange', function() {
         bgfg=$('input:radio[name="b_logo_bgfg"]:checked').val();
@@ -171,13 +173,13 @@
             $('#logo_holder').css("color",color);
             $('#logo_holder').css("border","4px solid "+color);
         }
-        $("#share").attr("href","share?tt="+tt+"&sg="+sg+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
+        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
     });
     $('.b_logo_radius').bind('input propertychange', function() {
         br=$('input:radio[name="b_logo_radius"]:checked').val();
         if(br=="true") $('#logo_holder').css("border-radius","24px");
         else $('#logo_holder').css("border-radius","0px");
-        $("#share").attr("href","share?tt="+tt+"&sg="+sg+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
+        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br);
     });
 </script>
 </html>
