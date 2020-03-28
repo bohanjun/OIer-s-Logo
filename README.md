@@ -1,4 +1,4 @@
-# OIer's Logo
+# OIer's Logo | Logo for OIers
 
 Demo: **[logo.oier.fun](https://logo.oier.fun/)**
 
