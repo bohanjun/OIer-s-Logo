@@ -1,5 +1,7 @@
 # OIer's Logo | Logo for OIers
 
+![wheel_wtf](https://logo.oier.fun/img/wheel_wtf.svg)
+
 Demo: **[logo.oier.fun](https://logo.oier.fun/)**
 
 If you want to add this to you website,
