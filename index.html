@@ -122,73 +122,73 @@
         <a class="link grey" href="http://www.beian.miit.gov.cn/" target="_blank">沪ICP备19004827号-3</a>
         <br /><br />
     </div>
+    <script src="https://static.piterator.com/node_modules/jquery/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+        var bgfg="true",color="rgb(0, 181, 173)",ttb="400",sgb="400",tt="",sg="",br="true",mb="true";
+        $('#s_logo_title').bind('input propertychange', function() {
+            var reg = /^\s*$/;tt=$(this).val();
+            if(reg.test($(this).val())) $('#logo_title').text("Logo for OIers");
+            else $('#logo_title').text($(this).val());
+            $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
+        });
+        $('#s_logo_slogan').bind('input propertychange', function() {
+            var reg = /^\s*$/;sg=$(this).val();
+            if(reg.test($(this).val())) $('#logo_slogan').text("https://logo.oier.fun/");
+            else $('#logo_slogan').text($(this).val());
+            $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
+        });
+        $('.b_logo_title').bind('input propertychange', function() {
+            var val=$('input:radio[name="b_logo_title"]:checked').val();
+            ttb=val;
+            $('#logo_title').css("font-weight",val);
+            $('#s_logo_title').css("font-weight",val);
+            $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
+        });
+        $('.b_logo_slogan').bind('input propertychange', function() {
+            var val=$('input:radio[name="b_logo_slogan"]:checked').val();
+            sgb=val;
+            $('#logo_slogan').css("font-weight",val);
+            $('#s_logo_slogan').css("font-weight",val);
+            $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
+        });
+        $('.b_logo_bg').bind('input propertychange', function() {
+            color=$('input:radio[name="b_logo_bg"]:checked').val();
+            if(bgfg=="true"){
+                $('#logo_holder').css("background-color",color);
+                $('#logo_holder').css("color","#ffffff");
+                $('#logo_holder').css("border","none");
+            }else{
+                $('#logo_holder').css("background-color","#ffffff");
+                $('#logo_holder').css("color",color);
+                $('#logo_holder').css("border","4px solid "+color);
+            }
+            $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
+        });
+        $('.b_logo_bgfg').bind('input propertychange', function() {
+            bgfg=$('input:radio[name="b_logo_bgfg"]:checked').val();
+            if(bgfg=="true"){
+                $('#logo_holder').css("background-color",color);
+                $('#logo_holder').css("color","#ffffff");
+                $('#logo_holder').css("border","none");
+            }else{
+                $('#logo_holder').css("background-color","#ffffff");
+                $('#logo_holder').css("color",color);
+                $('#logo_holder').css("border","4px solid "+color);
+            }
+            $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
+        });
+        $('.b_logo_radius').bind('input propertychange', function() {
+            br=$('input:radio[name="b_logo_radius"]:checked').val();
+            if(br=="true") $('#logo_holder').css("border-radius","24px");
+            else $('#logo_holder').css("border-radius","0px");
+            $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
+        });
+        $('.b_made_by').bind('input propertychange', function() {
+            mb=$('input:radio[name="b_made_by"]:checked').val();
+            if(mb=="true") $('#logo_made_by').css("display","block");
+            else $('#logo_made_by').css("display","none");
+            $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
+        });
+    </script>
 </body>
-<script src="https://static.piterator.com/node_modules/jquery/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script>
-    var bgfg="true",color="rgb(0, 181, 173)",ttb="400",sgb="400",tt="",sg="",br="true",mb="true";
-    $('#s_logo_title').bind('input propertychange', function() {
-        var reg = /^\s*$/;tt=$(this).val();
-        if(reg.test($(this).val())) $('#logo_title').text("Logo for OIers");
-        else $('#logo_title').text($(this).val());
-        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
-    });
-    $('#s_logo_slogan').bind('input propertychange', function() {
-        var reg = /^\s*$/;sg=$(this).val();
-        if(reg.test($(this).val())) $('#logo_slogan').text("https://logo.oier.fun/");
-        else $('#logo_slogan').text($(this).val());
-        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
-    });
-    $('.b_logo_title').bind('input propertychange', function() {
-        var val=$('input:radio[name="b_logo_title"]:checked').val();
-        ttb=val;
-        $('#logo_title').css("font-weight",val);
-        $('#s_logo_title').css("font-weight",val);
-        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
-    });
-    $('.b_logo_slogan').bind('input propertychange', function() {
-        var val=$('input:radio[name="b_logo_slogan"]:checked').val();
-        sgb=val;
-        $('#logo_slogan').css("font-weight",val);
-        $('#s_logo_slogan').css("font-weight",val);
-        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
-    });
-    $('.b_logo_bg').bind('input propertychange', function() {
-        color=$('input:radio[name="b_logo_bg"]:checked').val();
-        if(bgfg=="true"){
-            $('#logo_holder').css("background-color",color);
-            $('#logo_holder').css("color","#ffffff");
-            $('#logo_holder').css("border","none");
-        }else{
-            $('#logo_holder').css("background-color","#ffffff");
-            $('#logo_holder').css("color",color);
-            $('#logo_holder').css("border","4px solid "+color);
-        }
-        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
-    });
-    $('.b_logo_bgfg').bind('input propertychange', function() {
-        bgfg=$('input:radio[name="b_logo_bgfg"]:checked').val();
-        if(bgfg=="true"){
-            $('#logo_holder').css("background-color",color);
-            $('#logo_holder').css("color","#ffffff");
-            $('#logo_holder').css("border","none");
-        }else{
-            $('#logo_holder').css("background-color","#ffffff");
-            $('#logo_holder').css("color",color);
-            $('#logo_holder').css("border","4px solid "+color);
-        }
-        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
-    });
-    $('.b_logo_radius').bind('input propertychange', function() {
-        br=$('input:radio[name="b_logo_radius"]:checked').val();
-        if(br=="true") $('#logo_holder').css("border-radius","24px");
-        else $('#logo_holder').css("border-radius","0px");
-        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
-    });
-    $('.b_made_by').bind('input propertychange', function() {
-        mb=$('input:radio[name="b_made_by"]:checked').val();
-        if(mb=="true") $('#logo_made_by').css("display","block");
-        else $('#logo_made_by').css("display","none");
-        $("#share").attr("href","share?tt="+escape(tt)+"&sg="+escape(sg)+"&bf="+bgfg+"&cr="+color+"&ttb="+ttb+"&sgb="+sgb+"&br="+br+"&mb="+mb);
-    });
-</script>
 </html>
