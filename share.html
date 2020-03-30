@@ -7,14 +7,16 @@
     <title>OIer's Logo</title>
 </head>
 
-<body style="width: 640px; height: 400px" onselectstart="return false" oncontextmenu=self.event.returnValue=false>
-    <div id="logo_holder" style="width: 640px; height: 400px; background-color: rgb(0, 181, 173); color: rgba(255, 255, 255); border-radius: 24px; box-sizing: border-box">
+<body style="width: 640px; height: 400px" onselectstart="return false">
+    <div id="logo_holder" style="width: 640px; height: 400px; background-color: rgb(0, 181, 173); color: rgba(255, 255, 255); border-radius: 24px; box-sizing: border-box" oncontextmenu=self.event.returnValue=false>
         <div style="height: 136px"></div>
         <h1 id="logo_title" style="text-align: center; font-size: 48px" class="center">Logo for OIers</h1>
         <p id="logo_slogan" style="text-align: center; font-size: 28px;" class="center">https://logo.oier.fun/</p>
         <p id="logo_made_by" style="font-size: 16px; position: absolute; bottom: 0; width: 100%; text-align: center">Made By logo.oier.fun</p>
     </div>
+    <a id="svg" class="button blue reversal" style="width: 640px; text-decoration: none" target="_blank">右击下载 SVG</a>
     <script src="https://static.piterator.com/node_modules/jquery/dist/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dom-to-image/dist/dom-to-image.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" defer>
         window.onload = function(){
             function getUrlParam(name) {
@@ -44,6 +46,10 @@
             else $('#logo_holder').css("border-radius","0px");
             if(getUrlParam("mb")!="false") $('#logo_made_by').css("display","block");
             else $('#logo_made_by').css("display","none");
+
+            domtoimage.toSvg(document.getElementById('logo_holder')).then(function (dataUrl) {
+                $("#svg").attr("href",dataUrl);
+            });
         };
     </script>
 </body>
