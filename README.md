@@ -16,4 +16,9 @@ The effect is as follows:
 
 <a style="display:inline-block;color:rgb(33,133,208);font-weight:700;font-size:1.4em" href="https://logo.oier.fun/">Form https://logo.oier.fun/</a>
 
-**CopyRight © Piterator 2020**
+## License
+**Copyright &copy; 2020 [Piterator](https://github.com/piterator-org)**
+
+Licensed under [the **MIT License**](https://choosealicense.com/licenses/mit/).
+
+See the [`LICENSE`](LICENSE) file for license rights and limitations.
