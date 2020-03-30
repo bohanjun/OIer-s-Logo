@@ -1,5 +1,7 @@
 # OIer's Logo | Logo for OIers
 
+![wheel_yes](https://github.com/bohanjun/OierLogo/raw/master/img/wheel_yes.svg)
+
 Demo: **[logo.oier.fun](https://logo.oier.fun/)**
 
 If you want to add this to you website,
