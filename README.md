@@ -1,4 +1,4 @@
-# OIer's Logo | Logo for OIers
+# OIer's Logo | Logo for OIers | New Version
 
 ![wheel_wtf](https://logo.oier.fun/img/wheel_wtf.svg)
 
